@@ -1,45 +1,25 @@
-# Database-Project
-> Author: Yuchao Gu
+# WEB-2019
+## 主项目从https://github.com/veekxt/hfuu_shop中fork而来.
+## Eclipse 安装
+1. 官网下载安装包直接安装;
+2. 安装必备插件, `(mac)Help->MarketPlace`. 需要的有`JST Server Adapter, Web Developer Tool, Java EE Developer Tools, Eclipse Web Developer Tools`, **一定要先装插件再运行!!!!**
+3. 下载Tomcat, Eclipse只支持到Tomcat 8.0, 所以**根据自己的OS安装Tomcat 8.0**. 我选择的版本是8.0.32. 注意官网直接进去的版本是8.5, 这个版本Eclipse不支持. 我的下载地址在https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.32/bin/.
+4. `Import Project`到你下载好的Git包.
+5. `File->New->other->server->tomcat 8.0`, 导入Tomcat
+6. 右击Project文件夹, `Properties->Java Build Path`, 把jxl包的路径改成`本地路径/DatabaseProject/WebContent/.../jxl.jar`. 其它类似, JRE改成自己PATH里的.
+7. 运行, 右击project文件夹, 选择`RunAs->Run on Server`即可运行.
 
-> E-mail: 2015014178@buct.edu.cn
+## Gitignore 
+请务必在gitignore中加入下列语句(如我的ignore):
+```
+# Gitignore of wayne-mai, May 16, 2019
+.vscode/
+**/.settings/**
+.classpath
+.project
+```
+## 更新规范
+创建自己的branch, 采用`pull-request-merge'的工作流.
 
-> Date: 2017-12-27
-
->Description: 北京化工大学15级数据库课程设计，我抽到的题目为员工加班管理，采用jsp前端页面展示，sevelet后台服务，实现的是B/S架构
-
-## 功能概览
-
-### 整体一览
-
-![](./readmeDisplay/1.png)
-
-### 员工部分
-
-分为申请页，查询申请结果页
-
-![](./readmeDisplay/2.png)
-
-![](./readmeDisplay/3.png)
-
-### 负责人部分
-
-分为主页，审核页，查看历史页
-
-![](./readmeDisplay/4.png)
-
-![](./readmeDisplay/5.png)
-
-![](./readmeDisplay/6.png)
-
-### 生成excel月报表
-
-![](./readmeDisplay/7.png)
-
-![](./readmeDisplay/8.png)
-
-
-## 环境
-
-* 系统支持：`windows` 
-
-* 编程环境:`eclipse`
+## TODO
+成功启动之后, 数据库部分还有待完成.
