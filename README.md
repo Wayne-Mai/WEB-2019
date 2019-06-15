@@ -1,5 +1,5 @@
 # WEB-2019
-## 主项目从https://github.com/veekxt/hfuu_shop中fork而来.
+## 主项目从https://github.com/veekxt/hfuu_shop 中fork而来.
 ## Eclipse 安装
 1. 官网下载安装包直接安装;
 2. 安装必备插件, `(mac)Help->MarketPlace`. 需要的有`JST Server Adapter, Web Developer Tool, Java EE Developer Tools, Eclipse Web Developer Tools`, **一定要先装插件再运行!!!!**
