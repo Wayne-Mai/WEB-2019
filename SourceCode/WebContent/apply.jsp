@@ -8,7 +8,7 @@
 %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>加班信息填写</title>
+<title>请假信息填写</title>
 <style type="text/css">
 	body {
 		background-image:url(24.jpg);
@@ -36,7 +36,7 @@
 		top:-10px;
 		left:-10px;
 		width:400px;
-		height:400px;
+		height:660px;
 		background:rgba(0,134,139,0.8);
 		border-radius:15px;
 	}
@@ -140,31 +140,39 @@
 
 <body>
 	<div id="bg1">
-	<span class="item1"><a href="${context}/apply.jsp">申请加班</a></span>
+	<span class="item1"><a href="${context}/apply.jsp">申请请假</a></span>
 	<span class="item1"><a href="SearchServlet">申请结果</a></span>
 	<span class="item3">Welcome!</span>
 	</div>
 	<form id="bg2" action="ApplyingServlet" method="post">
 	<br></br>	
 	<div id="bg3">
-		<span class="item">加班类型:</span>
+		<span class="item">请假类型:</span>
 		<span>
 		<select class="item2" name="type" class="select1">
-		<option value="1">工作日加班</option>
-		<option value="2">周末加班</option>
-		<option value="3">节假日加班</option>
+		<option value="1">因公请假</option>
+		<option value="2">因私请假</option>
 		</select>
 		</span>
 		</div>
 		<br></br>
 		<div id="bg3">
-		<span class="item">加班日期:</span><span><input class="item2" type="date" name="date" value="2017-08-19"/></span>
+		<span class="item">起始日期:</span><span><input class="item2" type="date" name="date" value="2017-08-19"/></span>
+		</div><br></br>
+		<div id="bg3">
+		<span class="item">结束日期:</span><span><input class="item2" type="date" name="date" value="2017-08-19"/></span>
 		</div><br></br>
 		<div id="bg3">
 		<span class="item">开始时间:</span><span><input class="item2" type="time" name="timeb" value="15:00"/></span>
 		</div><br></br>
 		<div id="bg3">
 		<span class="item">结束时间:</span><span><input class="item2" type="time" name="timee" value="16:00" /></span>
+		</div><br></br>
+		<div id="bg3">
+		<span class="item">请假理由:</span><span><input class="item2" type="text" name="reason" value="" /></span>
+		</div><br></br>
+		<div id="bg3">
+		<span class="item">请假证明:</span><span><input class="item2" type="file" name="proof" /></span>
 		</div>
 		<br/><br/>
 
