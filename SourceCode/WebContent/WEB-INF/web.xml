@@ -13,6 +13,22 @@
     <url-pattern>/loginServlet</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateInfoServlet</servlet-name>
+    <servlet-class>com.servlet.UpdateInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateInfoServlet</servlet-name>
+    <url-pattern>/UpdateInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>ApplyingServlet</servlet-name>
     <servlet-class>com.servlet.ApplyingServlet</servlet-class>
   </servlet>
