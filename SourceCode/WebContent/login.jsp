@@ -294,7 +294,6 @@ input[type="submit"]:hover{
     <div id="main">
     
        <div id="mainbody">
-
 			<div class="sideright">	
 				<div class="index">
 					<form action="loginServlet" method="post">
