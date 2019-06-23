@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>欢迎进入员工加班管理系统</title>
+    <title>欢迎进入学生请假管理系统</title>
 
     <style type="text/css">
         body {
@@ -42,7 +42,7 @@
             background-size: cover;
             overflow: hidden;
             padding: 0px 0px 5px 0px;
-            background-image:url(login_bg.png);
+            background-image:url(img/login_bg.png);
             /* background-attachment: fixed; */
         }
 
@@ -108,7 +108,7 @@
         #logo {
             bottom: 10px;
             position: absolute;
-            left: 10px;
+            left: -20px;
         }
         .clear {
             clear:both;
@@ -122,7 +122,7 @@
 
 <div id="header">
     <div id="logo">
-        <img src="logo.jpg" alt="中山大学">
+        <img src="img/logo.jpg" alt="中山大学">
     </div>
 </div>
 
@@ -130,8 +130,8 @@
 <div id="main">
 
     <div id="mainbody">
-        <h1>登录成功，欢迎部门负责人<span><%=request.getAttribute("wname") %></span>来到员工加班管理系统！</h1>
-        <center><p style="color:black">3秒钟后系统会自动跳转到审核员工加班信息页面...</p></center>
+        <h1>登录成功，欢迎学院负责人<span><%=request.getAttribute("wname") %></span>来到学生请假管理系统！</h1>
+        <center><p style="color:black">3秒钟后系统会自动跳转到审核学生请假信息页面...</p></center>
         <%response.setHeader("refresh","3;url=adminmenu.jsp"); %>
     </div>
 
@@ -145,7 +145,7 @@
 
 <div id="footer">
     <div class="bottomlogo">
-        <img src="logo-bottom.jpg"></div>
+        <img src="img/logo-bottom.jpg"></div>
     <div class="bottomcontact_cn">通讯地址:广州市新港西路135号     邮编:510275<br>
         电话: 020-84112828</div>
     <div class="bottomcontact_en">
@@ -161,8 +161,8 @@
 </body>
 
 <%-- <body>
-	<h1>登录成功，欢迎部门负责人<span><%=request.getAttribute("wname") %></span>来到员工加班管理系统！</h1>
-	<center><p style="color:white">3秒钟后系统会自动跳转到审核员工加班信息页面...</p></center>
+	<h1>登录成功，欢迎学院负责人<span><%=request.getAttribute("wname") %></span>来到学生请假管理系统！</h1>
+	<center><p style="color:white">3秒钟后系统会自动跳转到审核学生请假信息页面...</p></center>
 	<%response.setHeader("refresh","3;url=adminmenu.jsp"); %>
 </body> --%>
 </html>

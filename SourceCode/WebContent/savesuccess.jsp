@@ -22,7 +22,7 @@
 			Connection dbConn = null;
 			dbConn= DriverManager.getConnection(dbURL,userName,userPwd);
 			PreparedStatement ps;
-			String sql="select year(workdate) 年,month(workdate) 月,wk.id 学号,ext.wtype 加班类型,sum(timet) 加班总时间 "+
+			String sql="select year(workdate) 年,month(workdate) 月,wk.id 学号,ext.wtype 请假类型,sum(timet) 请假总时间 "+
 					"from extraworkinfo ext,worker wk "+
 					"where confirmstatus=1 and ext.wno=wk.wno "+
 					"group by year(workdate),month(workdate),ext.wno,ext.wtype";
@@ -33,9 +33,9 @@
 				info.setYear(rs.getString("年"));
 				info.setMonth(rs.getString("月"));
 				info.setId(rs.getInt("学号"));
-				info.setWtype(rs.getString("加班类型"));
+				info.setWtype(rs.getString("请假类型"));
 
-				info.setTotal_wtime(rs.getString("加班总时间"));
+				info.setTotal_wtime(rs.getString("请假总时间"));
 				info_list.add(info);
 			}
 			response.reset();//清空输出流

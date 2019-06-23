@@ -41,7 +41,7 @@
             background-size: cover;
             overflow: hidden;
             padding: 0px 0px 5px 0px;
-            background-image:url(login_bg.png);
+            background-image:url(img/login_bg.png);
             /* background-attachment: fixed; */
         }
 
@@ -107,7 +107,7 @@
         #logo {
             bottom: 10px;
             position: absolute;
-            left: 10px;
+            left: -20px;
         }
         .clear {
             clear:both;
@@ -121,7 +121,7 @@
 
 <div id="header">
     <div id="logo">
-        <img src="logo.jpg" alt="中山大学">
+        <img src="img/logo.jpg" alt="中山大学">
     </div>
 </div>
 
@@ -130,8 +130,8 @@
 
     <div id="mainbody">
         <h1>登录失败，<span><%=request.getAttribute("username") %></span>的用户名或者密码错误！</h1>
-        <center><p style="color:black">5秒钟后系统会自动跳转到登录页面...</p></center>
-        <%response.setHeader("refresh","5;url=login.jsp");%>
+        <center><p style="color:black">3秒钟后系统会自动跳转到登录页面...</p></center>
+        <%response.setHeader("refresh","3;url=login.jsp");%>
     </div>
 
 </div>
@@ -144,7 +144,7 @@
 
 <div id="footer">
     <div class="bottomlogo">
-        <img src="logo-bottom.jpg"></div>
+        <img src="img/logo-bottom.jpg"></div>
     <div class="bottomcontact_cn">通讯地址:广州市新港西路135号     邮编:510275<br>
         电话: 020-84112828</div>
     <div class="bottomcontact_en">

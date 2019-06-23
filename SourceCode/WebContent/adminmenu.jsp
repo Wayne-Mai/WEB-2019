@@ -9,7 +9,7 @@
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>欢迎来到加班申请系统</title>
+    <title>欢迎来到请假申请系统</title>
     <style type="text/css">
 
 
@@ -37,7 +37,7 @@
             background-size: cover;
             overflow: hidden;
             padding: 0px 0px 5px 0px;
-            background-image:url(mainbk.jpg);
+            background-image:url(img/mainbk.jpg);
             /* background-attachment: fixed; */
         }
 
@@ -103,7 +103,7 @@
         #logo {
             bottom: 10px;
             position: absolute;
-            left: 10px;
+            left: -20px;
         }
         .clear {
             clear:both;
@@ -115,7 +115,7 @@
             left:250px;
             height:200px;
             width:200px;
-            background-image:url(10.png);
+            background-image:url(img/10.png);
             background-size: cover;  /* 图片平铺拉伸，适应屏幕 */
             border-top-left-radius:6px;
             border-top-right-radius:6px;
@@ -126,7 +126,7 @@
             left:600px;
             height:200px;
             width:200px;
-            background-image:url(11.png);
+            background-image:url(img/11.png);
             background-size: cover;  /* 图片平铺拉伸，适应屏幕 */
             border-top-left-radius:6px;
             border-top-right-radius:6px;
@@ -137,7 +137,7 @@
             left:950px;
             height:200px;
             width:200px;
-            background-image:url(12.png);
+            background-image:url(img/12.png);
             background-size: cover;  /* 图片平铺拉伸，适应屏幕 */
             border-top-left-radius:6px;
             border-top-right-radius:6px;
@@ -202,7 +202,7 @@
 <body>
 <div id="header">
     <div id="logo">
-        <img src="logo.jpg" alt="中山大学">
+        <img src="img/logo.jpg" alt="中山大学">
     </div>
 </div>
 
@@ -229,7 +229,7 @@
 
 <div id="footer">
     <div class="bottomlogo">
-        <img src="logo-bottom.jpg"></div>
+        <img src="img/logo-bottom.jpg"></div>
     <div class="bottomcontact_cn">通讯地址:广州市新港西路135号     邮编:510275<br>
         电话: 020-84112828</div>
     <div class="bottomcontact_en">
@@ -248,7 +248,7 @@
 	<div id="bg2"></div>
 	<div id="bg3"></div>
 	<div id="item1"><a href="auditServlet">审核申请信息</a></div>
-	<div id="item2"><a href="adminSearchServlet">查看所有部门加班结果</a></div>
-	<div id="item3"><a href="savesuccess.jsp">生成加班信息统计表</a></div>
+	<div id="item2"><a href="adminSearchServlet">查看所有学院请假结果</a></div>
+	<div id="item3"><a href="savesuccess.jsp">生成请假信息统计表</a></div>
 </body>
 </html> -->

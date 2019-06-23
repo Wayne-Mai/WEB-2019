@@ -8,6 +8,7 @@
 <%@page language="java" import="java.util.*,java.sql.*"
         contentType="text/html; charset=utf-8"%>
 
+
 <!DOCTYPEHTML>
 <html>
 <head>
@@ -41,6 +42,7 @@
         <br><br>
         <input type="submit" name="sub" value="注册">
     </form>
+
 
 </div>
 </body>

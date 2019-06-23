@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>数据科学与计算机学院请假系统</title>
-    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <style>
         body {
             font-family: Arial,sans-serif;
@@ -19,6 +19,7 @@
 
         p {
             margin: 0px;
+
             padding: 0px;
         }
 
@@ -32,13 +33,55 @@
 
         }
 
+        #logo {
+            bottom: 10px;
+            position: absolute;
+            left: -20px;
+        }
+
+        .name{
+            font-weight: bold;
+            font-size: 40px;
+            left : 300px;
+            bottom: 20px;
+            position: absolute;
+            text_align:center;
+            color:white;
+            font-family: "Kaiti SC",'Charm', cursive;
+
+        }
+
+        .circleImg{
+            margin:0px auto;
+            border-radius: 30px;
+            width:60px;
+            height:60px;
+            left : 900px;
+            bottom: 20px;
+            position: absolute;
+        }
+
+        .close{
+
+            right:-10px;
+            top: 40px;
+            position: absolute;
+        }
+
+
+
+        .fa {
+            color: white;
+        }
+
+
 
         #main {
             background-color: #FFFFFF;
             background-size: cover;
             overflow: hidden;
             padding: 0px 0px 5px 0px;
-            background-image:url(login_bg.png);
+            background-image:url(img/login_bg.png);
             /* background-attachment: fixed; */
         }
 
@@ -101,11 +144,7 @@
             text-decoration: none;
         }
 
-        #logo {
-            bottom: 10px;
-            position: absolute;
-            left: 10px;
-        }
+
         .clear {
             clear:both;
         }
@@ -213,16 +252,24 @@
 
         .sideright{
             width: 480px;
-            height: 450px;
+            height: 650px;
             margin:0 auto;
 
         }
         .sideright .index{
             width: 330px;
-            height: 350px;
+            height: 420px;
             background-color: rgba(0,0,0,0.5);  /* rgba(255,255,255,0.75); */
             margin: 50px 90px;
+            position: relative;
         }
+
+        #register{
+            position: absolute;
+            top:364px;
+            left:104px;
+        }
+
         .headline{
             font-size: 22px;
             text-align: center;
@@ -281,13 +328,27 @@
         }
 
 
+
+
     </style>
 </head>
+
 <body>
 <div id="header">
     <div id="logo">
-        <img src="logo.jpg" alt="中山大学">
+        <img src="img/logo.jpg" alt="中山大学">
     </div>
+
+    <div class="name">
+        <span >数据科学与计算机学院请假系统</span>
+    </div>
+
+    <img class="circleImg" src="img/default.png"  />
+
+<%--    <a class="close" href="#" >--%>
+<%--        <i class="fa fa-sign-out fa-3x" aria-hidden="false"></i>--%>
+<%--    </a>--%>
+
 </div>
 
 
@@ -297,16 +358,17 @@
         <div class="sideright">
             <div class="index">
                 <form action="loginServlet" method="post">
-                    <p class="headline">用户登陆</p>
+                    <p class="headline">用户登录</p>
                     <p class="astyle">用户名：</p>
                     <input type="text"  name="wname" placeholder="请输入用户名">
                     <p class="astyle">密码：</p>
                     <input type="password"  name="password" placeholder="请输入密码">
-                    <input type="submit" value="登陆" name="login" >
+                    <input type="submit" value="登录" name="login" >
+                    <input type="submit" value="管理员登录" name="login_teacher" >
                     <br>
                 </form>
 
-                <a href="register.jsp">点我注册</a></div>
+               <div id="register"> 还没有账号?<a href="register.jsp">点我注册</a></div>
         </div>
     </div>
 </div>
@@ -321,7 +383,7 @@
 
 <div id="footer">
     <div class="bottomlogo">
-        <img src="logo-bottom.jpg"></div>
+        <img src="img/logo-bottom.jpg"></div>
     <div class="bottomcontact_cn">通讯地址:广州市新港西路135号     邮编:510275<br>
         电话: 020-84112828</div>
     <div class="bottomcontact_en">

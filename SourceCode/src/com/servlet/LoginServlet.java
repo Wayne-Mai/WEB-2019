@@ -51,11 +51,13 @@ public class LoginServlet extends HttpServlet {
 				HttpSession session = request.getSession();
 				System.out.print(session);
 				session.setAttribute("wno", rs.getInt("wno"));
+				session.setAttribute("photo",rs.getString("profile_photo"));
+				session.setAttribute("my_name",rs.getString("wname"));
 				if (rs.getString("pwno") != null) {
-					request.getRequestDispatcher("welcome_worker.jsp").forward(request, response);
+					request.getRequestDispatcher("apply.jsp").forward(request, response);
 				} else {
 
-					request.getRequestDispatcher("welcome_admin.jsp").forward(request, response);
+					request.getRequestDispatcher("auditServlet").forward(request, response);
 				}
 			} else {
 				request.getRequestDispatcher("error.jsp").forward(request, response);

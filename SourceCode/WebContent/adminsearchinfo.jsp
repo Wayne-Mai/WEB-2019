@@ -9,6 +9,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
     <title>请假历史信息</title>
     <style>
 
@@ -101,7 +103,7 @@
             background-size: cover;
             overflow: hidden;
             padding: 0px 0px 5px 0px;
-            background-image: url(bk2.jpeg);
+            background-image: url(img/bk2.jpeg);
             /* background-attachment: fixed; */
         }
 
@@ -153,19 +155,19 @@
 
         #bg1 {
             left: 25%;
-            background-image: url(10.png);
+            background-image: url(img/10.png);
 
         }
 
         #bg2 {
             left: 40%;
-            background-image: url(11.png);
+            background-image: url(img/11.png);
 
         }
 
         #bg3 {
             left: 55%;
-            background-image: url(12.png);
+            background-image: url(img/12.png);
 
         }
 
@@ -186,6 +188,50 @@
             padding: 0px;
 
         }
+
+        .name{
+            font-weight: bold;
+            font-size: 40px;
+            left : 300px;
+            bottom: 20px;
+            position: absolute;
+            text_align:center;
+            color:white;
+            font-family: "Kaiti SC",'Charm', cursive;
+
+        }
+
+        .circleImg{
+            margin:0px auto;
+            border-radius: 30px;
+            width:60px;
+            height:60px;
+            left : 1000px;
+            bottom: 20px;
+            position: absolute;
+        }
+
+        .close{
+            left:1074px;
+            top: 55px;
+            position: absolute;
+        }
+        #myName{
+            position: absolute;
+            left:1074px;
+            top: 36px;
+            font-size: 20px;
+            color: white;
+        }
+
+
+
+        .fa {
+            color: white;
+        }
+
+
+
 
 
         #footer {
@@ -242,7 +288,7 @@
         #logo {
             bottom: 10px;
             position: absolute;
-            left: 10px;
+            left: -20px;
         }
 
         .clear {
@@ -257,8 +303,22 @@
 
 <div id="header">
     <div id="logo">
-        <img src="logo.jpg" alt="中山大学">
+        <img src="img/logo.jpg" alt="中山大学">
     </div>
+
+    <div class="name">
+        <span >数据科学与计算机学院请假系统</span>
+    </div>
+    <%
+        String head=(String) session.getAttribute("photo");
+    %>
+
+    <img class="circleImg" src="img/admin.jpg"  />
+    <div id="myName"><%=session.getAttribute("my_name")%></div>
+    <a class="close" href="login.jsp" >
+        <i class="fa fa-sign-out fa-3x" aria-hidden="false"></i>
+    </a>
+
 </div>
 
 
@@ -330,7 +390,7 @@
 
 <div id="footer">
     <div class="bottomlogo">
-        <img src="logo-bottom.jpg"></div>
+        <img src="img/logo-bottom.jpg"></div>
     <div class="bottomcontact_cn">通讯地址:广州市新港西路135号 邮编:510275<br>
         电话: 020-84112828
     </div>
