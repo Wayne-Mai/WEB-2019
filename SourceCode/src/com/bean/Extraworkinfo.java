@@ -61,5 +61,13 @@ public class Extraworkinfo {
 	public int getId() {return id;}
 	public void setId(int id) {this.id=id;}
 
-
+	//profile photo
+	public String profile_photo;
+	public void setProfile_photo(String profile_photo) {
+		this.profile_photo=profile_photo;
+	}
+	public String getProfile_photo()
+	{
+		return profile_photo;
+	}
 }

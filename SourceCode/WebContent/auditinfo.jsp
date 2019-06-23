@@ -294,54 +294,54 @@
 
     <form action="changeAuditServlet" method="post">
         <div id="table_wrapper">
-        <% ArrayList<Extraworkinfo> rs = (ArrayList<Extraworkinfo>) request.getAttribute("result"); %>
-        <br></br>
-        <table align="center">
+            <% ArrayList<Extraworkinfo> rs = (ArrayList<Extraworkinfo>) request.getAttribute("result"); %>
+            <br></br>
+            <table align="center">
 
-            <tr>
-                <th>姓名</th>
-                <th>学号</th>
-                <th>申请请假日期</th>
-                <th>请假类型</th>
-                <th>请假开始时间</th>
-                <th>请假结束时间</th>
-                <th>审核状态</th>
-                <th>审核人</th>
-                <th>更改审核信息</th>
-            </tr>
-            <%
-                for (Integer i = 0; i < rs.size(); i++) {
-                    Extraworkinfo info = rs.get(i);
-                    String name_radio = i.toString();
-                    //System.out.println(name_radio);
-            %>
-            <tr>
-                <td><%=info.getName()%>
-                </td>
-                <td><%=info.getId()%>
-                </td>
-                <td><%=info.getDate()%>
-                </td>
-                <td><%=info.getType()%>
-                </td>
-                <td><%=info.getTimeb()%>
-                </td>
-                <td><%=info.getTimee()%>
-                </td>
-                <td><%=info.getConfirmstatus()%>
-                </td>
-                <td><%=info.getPname()%>
-                </td>
-                <td>
-                    <input type="radio" name="<%=name_radio%>" value="ok" id="ok"/><label for="ok">通过</label>
-                    <input type="radio" name="<%=name_radio%>" value="pass" id="pass" checked="checked"/><label
-                        for="pass">未通过</label>
-                </td>
-            </tr>
-            <%
-                }
-            %>
-        </table>
+                <tr>
+                    <th>姓名</th>
+                    <th>学号</th>
+                    <th>申请请假日期</th>
+                    <th>请假类型</th>
+                    <th>请假开始时间</th>
+                    <th>请假结束时间</th>
+                    <th>审核状态</th>
+                    <th>审核人</th>
+                    <th>更改审核信息</th>
+                </tr>
+                <%
+                    for (Integer i = 0; i < rs.size(); i++) {
+                        Extraworkinfo info = rs.get(i);
+                        String name_radio = i.toString();
+                        //System.out.println(name_radio);
+                %>
+                <tr>
+                    <td><%=info.getName()%>
+                    </td>
+                    <td><%=info.getId()%>
+                    </td>
+                    <td><%=info.getDate()%>
+                    </td>
+                    <td><%=info.getType()%>
+                    </td>
+                    <td><%=info.getTimeb()%>
+                    </td>
+                    <td><%=info.getTimee()%>
+                    </td>
+                    <td><%=info.getConfirmstatus()%>
+                    </td>
+                    <td><%=info.getPname()%>
+                    </td>
+                    <td>
+                        <input type="radio" name="<%=name_radio%>" value="ok" id="ok"/><label for="ok">通过</label>
+                        <input type="radio" name="<%=name_radio%>" value="pass" id="pass" checked="checked"/><label
+                            for="pass">未通过</label>
+                    </td>
+                </tr>
+                <%
+                    }
+                %>
+            </table>
         </div>
         <br>
         <input id="btn1" type="submit" value="保存"/>

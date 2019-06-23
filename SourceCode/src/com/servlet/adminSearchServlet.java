@@ -1,5 +1,6 @@
 package com.servlet;
 
+import java.io.Console;
 import java.io.IOException;
 
 import com.bean.*;
@@ -31,7 +32,7 @@ public class adminSearchServlet extends HttpServlet {
             Connection dbConn = null;
             dbConn = DriverManager.getConnection(dbURL, userName, userPwd);
             PreparedStatement ps;
-            String sql = "select w.wname 姓名,w.id 学号,ex.wtype 请假类型,ex.workdate 申请请假日期,ex.timeb 请假开始时间," +
+            String sql = "select w.profile_photo 头像,w.wname 姓名,w.id 学号,ex.wtype 请假类型,ex.workdate 申请请假日期,ex.timeb 请假开始时间," +
                     "ex.timee 请假结束时间,ex.confirmstatus 审核状态,w.pwno 审核人 " +
                     "from extraworkinfo ex,worker w where ex.wno=w.wno order by ex.workdate desc";
             ps = dbConn.prepareStatement(sql);
@@ -39,7 +40,10 @@ public class adminSearchServlet extends HttpServlet {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Extraworkinfo info = new Extraworkinfo();
+                info.setProfile_photo(rs.getString("头像"));
+
                 info.setName(rs.getString("姓名"));
+                info.setId(rs.getInt("学号"));
                 info.setType(rs.getInt("请假类型"));
                 info.setDate(rs.getDate("申请请假日期").toString());
                 info.setTimeb(rs.getTime("请假开始时间").toString());
@@ -51,7 +55,6 @@ public class adminSearchServlet extends HttpServlet {
                 }
                 info.setPname(rs.getString("审核人"));
 
-                info.setId(rs.getInt("学号"));
 
                 info_list.add(info);
             }

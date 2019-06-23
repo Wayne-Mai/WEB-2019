@@ -9,7 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>加班历史信息</title>
+    <title>请假历史信息</title>
     <style>
 
 
@@ -272,13 +272,16 @@
         <div id="item3" class="item"><a href="savesuccess.jsp">生成请假信息统计表</a></div>
     </div>
 
-
+    <%String p[]=new String[15];
+        int i=0;
+    %>
     <div id="table_wrapper">
         <br>
         <br>
         <table align="center">
             <% ArrayList<Extraworkinfo> rs = (ArrayList<Extraworkinfo>) request.getAttribute("result"); %>
             <tr>
+                <th>头像</th>
                 <th>姓名</th>
                 <th>学号</th>
                 <th>申请请假日期</th>
@@ -291,6 +294,14 @@
                 for (Extraworkinfo info : rs) {
             %>
             <tr>
+                <% String path=info.getProfile_photo();
+                %>
+
+                <td>
+                    <div style="width:40px; height:40px; border-radius:50%; overflow:hidden;">
+                        <img src="<%=path %>"  width="50" height="50">
+                    </div>
+                </td>
                 <td><%=info.getName()%>
                 </td>
                 <td><%=info.getId() %>
@@ -303,12 +314,15 @@
                 <td><%=info.getTimee()%>
                 </td>
                 <td><%=info.getConfirmstatus()%>
+
                 </td>
             </tr>
             <%
                 }
             %>
         </table>
+
+
     </div>
     <br>
 </div>
