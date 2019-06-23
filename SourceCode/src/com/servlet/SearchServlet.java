@@ -31,7 +31,9 @@ public class SearchServlet extends HttpServlet {
 			Connection dbConn = null;
 			dbConn = DriverManager.getConnection(dbURL, userName, userPwd);
 			PreparedStatement ps;
-			String sql = "select w1.wname 员工名,ex.wtype 加班类型,ex.workdate 申请加班日期,ex.timeb 加班开始时间,ex.timee 加班结束时间,ex.confirmstatus 审核状态,w2.wname 审核人 from extraworkinfo ex, worker w1, worker w2 where w1.wno=? and ex.wno=w1.wno and ex.confirmwno=w2.wno order by ex.workdate desc";
+			String sql = "select w1.wname 员工名,ex.wtype 加班类型,ex.workdate 申请加班日期,ex.timeb 加班开始时间,ex.timee 加班结束时间," +
+					"ex.confirmstatus 审核状态,w2.wname 审核人 from extraworkinfo ex, worker w1, worker w2 " +
+					"where w1.wno=? and ex.wno=w1.wno and ex.confirmwno=w2.wno order by ex.workdate desc";
 			ps = dbConn.prepareStatement(sql);
 			ps.setInt(1, wno);
 

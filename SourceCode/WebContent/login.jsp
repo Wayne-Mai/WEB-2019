@@ -294,30 +294,7 @@ input[type="submit"]:hover{
     <div id="main">
     
        <div id="mainbody">
-<!--           	<form action="loginServlet" method="post">
-				<div id="bg1">
-				<br></br>
-				    <h3>Login</h3>
-				    <br></br>
-				    
-				    <div id="bg2">
-					<span class="item">姓名:</span>
-					<input class="item2" type="text" name="wname" placeholder="请输入用户名"/>
-					</div>
-					<br></br>
-					<div id="bg2">
-					<span class="item">密码:</span>
-					<input class="item2" type="password" name="password" placeholder="请输入密码"/>
-					</div> 
-					
 
-					<br></br>
-					<input id="bg4" type="submit" value="login"/>
-					<br></br>
-					<input id="bg4" type="reset" value="reset"/>
-					</div>
-				</form>  -->
-				
 			<div class="sideright">	
 				<div class="index">
 					<form action="loginServlet" method="post">
@@ -327,8 +304,10 @@ input[type="submit"]:hover{
 						<p class="astyle">密码：</p>
 						<input type="password"  name="password" placeholder="请输入密码">
 						<input type="submit" value="登陆" name="login" >
-						<br></br>
+						<br>
 					</form>
+
+                    <a href="register.jsp">点我注册</a></div>
 				</div>
 			</div>
 		 </div>

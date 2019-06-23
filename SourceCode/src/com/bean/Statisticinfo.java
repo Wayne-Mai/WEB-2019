@@ -44,5 +44,9 @@ public class Statisticinfo {
 	public void setTotal_wtime(String total_wtime) {
 		this.total_wtime = total_wtime;
 	}
-	
+
+	//Added
+	public int id;
+	public int getId() {return id;}
+	public void setId(int id) {this.id=id;}
 }
